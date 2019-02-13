@@ -127,3 +127,11 @@ still be compilable with cmake and make.
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
+#Results 
+
+These results were achieved using the code in this repository. The simulator provided by Udacity received the positions of the car asynchronously from two sensors, A LIDAR and a RADAR and the extended kalman filter managed to an accurate value of the true position. The Root Mean squared error at the end of both simulations is lower than [0.11,0.11,0.53,0.53]
+
+Track 1                       |  Track 2
+:----------------------------:|:------------------------------:
+![Track 1](./examples/dataset1.gif) | ![Track 2](./examples/dataset2.gif)
+

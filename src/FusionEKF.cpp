@@ -158,9 +158,7 @@ float dt_4 = dt_3 * dt;
     Tools tools;
     ekf_.Hj_ = tools.CalculateJacobian(ekf_.x_);
 
-    float rho = ekf_.UpdateEKF(measurement_pack.raw_measurements_);
-    cout << "updating radar rho :"<<rho<<"\n";
-    cout << "measured angle  : "<< measurement_pack.raw_measurements_(1);
+    ekf_.UpdateEKF(measurement_pack.raw_measurements_);
 
   } else {
     // TODO: Laser updates

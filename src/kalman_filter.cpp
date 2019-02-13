@@ -52,7 +52,7 @@ void KalmanFilter::Update(const VectorXd &z) {
   P_ = (I - K * H_laser_) * P_;
 }
 
-float  KalmanFilter::UpdateEKF(const VectorXd &z) {
+void  KalmanFilter::UpdateEKF(const VectorXd &z) {
   
   float rho = sqrt(x_(0)*x_(0) + x_(1)*x_(1));
   float phi = atan2(x_(1), x_(0));
@@ -87,7 +87,7 @@ float  KalmanFilter::UpdateEKF(const VectorXd &z) {
   long x_size = x_.size();
   MatrixXd I = MatrixXd::Identity(x_size, x_size);
 P_ = (I - K * Hj_) * P_;
-  return phi;
+  return;
   /**
    * TODO: update the state by using Extended Kalman Filter equations
    */
